@@ -1,5 +1,5 @@
 import { request } from "../../request/index.js";
-
+import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({
 
   /**
@@ -64,7 +64,16 @@ Page({
     })
 
   },
-
+  handleItemTap(e){//点击左侧列表右侧滚动
+    const { index } = e.currentTarget.dataset;
+    //点击左侧对应菜单 右侧改变对应索引下的child值
+    let rightContent = this.Cates[index].children;
+    this.setData({
+      currentIndex:index,
+      rightContent,
+      scrollTop:0
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

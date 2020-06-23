@@ -3,7 +3,7 @@
   <view class="cates_container">
     <!-- 左侧 -->
     <scroll-view scroll-y class="left_menu">
-      <view class="menu_item {{}}"
+      <view class="menu_item {{index==currentIndex?'active':''}}"
       wx:for="{{leftMenuList}}"
       wx:key="*this"
       bindtap="handleItemTap"
@@ -23,9 +23,9 @@
       wx:key="*this"
       >
         <view class="goods_title">
-          <text class="delimiter"> > </text>
+          <text class="delimiter"> / </text>
           <text class="title">{{item1.cat_name}}</text>
-          <text class="delimiter"> < </text>
+          <text class="delimiter"> / </text>
         </view>
         <view class="goods_list">
           <navigator
@@ -40,7 +40,7 @@
           </navigator>
         </view>
       </view>
-
+      
     </scroll-view>
   </view>
 

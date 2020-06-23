@@ -26,7 +26,7 @@
 }
 .index_floor .floor_group .floor_list navigator {
   float: left;
-  width: 32.3%;
+  width: 33.33%;
   /* 后四个超链接 */
   /* 2 3 两个超链接 */
 }
